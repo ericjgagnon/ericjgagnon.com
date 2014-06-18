@@ -11,17 +11,6 @@ Font Icons
   font-weight: normal;
   font-style: normal;
 }
-
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?88580699#fontello') format('svg');
-  }
-}
-*/
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
@@ -59,8 +48,6 @@ html,
 body {
   background: url('../images/halftone.png') no-repeat center center fixed; 
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -68,9 +55,22 @@ body {
   font-size: 1.125em;
 }
 
+h2 {
+  font-weight: normal;
+  margin: 0 5%;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #789897;
+}
+
 a {
   text-decoration: none;
   color: #4D1E00;
+}
+
+p {
+  line-height: 1.5em;
+  text-indent: 10px;
+  padding: 1% 4%;
 }
 
 li {
@@ -84,7 +84,7 @@ img {
 #wrapper {
   min-height: 100%;
   position: relative;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Enriqueta', serif;
   font-weight: normal;
 }
 
@@ -93,11 +93,9 @@ General Content Size
 ***************************/
 
 #content {
-  font-family: 'Enriqueta', serif;
   color: #4D1E00;
   padding: 20px 10px 10px;
-  padding-bottom: 140px;   /* Height of the footer element */
-  /*background-color: #a5a5a5; //Checking clearfix*/
+  /*padding-bottom: 140px;  Height of the footer element */*/
 }
 
 /***************************
@@ -112,7 +110,7 @@ header {
 
 #brand {
   text-align: center;
-  margin: 15px 0 20px;
+  margin: 15px 0 25px;
 }
 
 #brand a {
@@ -123,13 +121,6 @@ header {
   padding: 10px 20px;
   background-color: #CF5300;
   border-radius: 50%;
-}
-
-#brand h2 {
-  font-family: 'Enriqueta', serif;
-  font-size: 0.75em;
-  margin: -5px 0 0;
-  font-weight: normal;
 }
 
 /***************************
@@ -163,24 +154,27 @@ Footer
 
 #footer {
   width: 100%;
-  height: 70px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 80px;
   text-align: center;
-  font-size: 0.5em;
+}
+
+#footer h3{
+  margin: 0;
 }
 
 #footer h3 a {
   font-weight: 100;
+  font-size: 0.5em;
 }
 
 .footer-icons {
   padding: 0;
+  margin-bottom: 2px;
 }
 
 .footer-icons li {
   display: inline-block;
+  font-size: 0.825em;
 }
 .icon-twitter:before { 
   content: '\e801'; 
@@ -192,68 +186,57 @@ Footer
 /***************************
 About Me Page
 ***************************/
-.about-me-container {
-  text-align: center;
-}
 
 .about-me-container {
   margin: 2%;
   font-size: 1em;
 }
 
-.about-me-container img {
-  display: block;
-  max-width: 200px;
-  margin: 0 auto 30px;
-  border-radius: 25%;
+.about-me-container h2 {
+  text-align: center;
 }
 
-.about-me-container p {
-  padding: 1%;
-  line-height: 1.5em;
-  text-indent: 10px;
+.about-me-container img {
+  text-align: center;
+  display: block;
+  max-width: 200px;
+  margin: 30px auto 30px;
+  border-radius: 25%;
+  transition-duration: .4s;
 }
 
 /***************************
 Projects Page
 ***************************/
+#projects-container {
+  height: 100%;
+  padding: 0 10px;
+}
 
 .projects-list {
   padding: 0;
-  margin: 0;
-}
-
-.projects-list ul {
-  padding: 2%;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: space-around;
 }
 
 .projects-list li {
-  box-shadow: 2px -2px 2px 2px rgba(36,32,33,0.50); 
-  background-color: rgba(36,32,33,0.50);     
-  float: left;
-  width: 45%;
-  height: 45%;
-  margin: 2.5%;
-}
-
-.projects-list li.ragnarok a{
-  background-image: url('../images/ragnarok.png') 250px 250px no-repeat;
-}
-
-.projects-list li.num1 a{
-  background-image: url('../images/numbers-01.jpg');
+  box-shadow: 3px -3px 3px 3px rgba(120,152,151,0.60); 
+  background-color: rgba(120,152,151,0.60); 
+  background-image: url('../images/ragnarok.png');
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  width: 250px;
+  margin-bottom: 15px;
 }
 
 /***************************
 Contact Page
 ***************************/
-
-#contact-container {
+#contact-container h2, #contact-container li {
   text-align: center;
-}
-
-#primary-col p {
-  line-height: 1.5em;
 }
 
 #contact-container ul {
@@ -263,26 +246,6 @@ Contact Page
 #contact-container li {
   margin: 0 0 10px;
 }
-
-#contact-container a {
-  min-height: 20px;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  padding: 0 0 0 30px;
-}
-
-#secondary-col li.phone a {
-  background-image: url('../images/phone.png');
-}
-
-#secondary-col li.email a {
-  background-image: url('../images/mail.png');
-}
-
-#secondary-col li.tweet a {
-  background-image: url('../images/tweet.png');
-}
-
 
 /***************************
 Colors Misc.
@@ -295,7 +258,14 @@ Colors Misc.
 nav li a:hover, nav li a.selected { 
   background-color: rgba(120,152,151,0.30);
   border-radius: 30%;     
-} 
+}
+
+.about-me-container img:hover {
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+
 
 /***************************
 Clearfix
