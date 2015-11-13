@@ -1,0 +1,23 @@
+{
+  "name": "ericjgagnon",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://wickedRidge@bitbucket.org/wickedRidge/ericjgagnon.git"
+  },
+  "author": "Eric Gagnon",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/wickedRidge/ericjgagnon#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "node-bourbon": "^4.2.3"
+  }
+}

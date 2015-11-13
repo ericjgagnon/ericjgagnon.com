@@ -1,0 +1,72 @@
+//Utilities floats, text alignment etc
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.inactive {
+  pointer-events: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transition {
+  @include transition(all 0.4s);
+}
+
+.absolute {
+  position: absolute;
+  &--center-vertically {
+    @extend .absolute;
+    @include transform(translateY(-50%));
+    top: 50%;
+  }
+  &--center-horizontally {
+    @extend .absolute;
+    @include transform(translateX(-50%));
+    left: 50%;
+  }
+  &--center-both {
+    @extend .absolute--center-horizontally, .absolute--center-vertically;
+  }
+}

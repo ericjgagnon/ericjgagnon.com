@@ -1,0 +1,87 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: url('../images/vintagewood.jpg') repeat center center fixed;
+  height: 100%;
+  color: $body-font;
+  margin-bottom: 0;
+  font-weight: lighter;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+a, p, button, select, option {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend .text-center;
+  color: $heading-font;
+  font-weight: bold;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+h1 { font-size: 2em; line-height: 1.25;}
+h2 { font-size: 1.625em; line-height: 1.15384615;}
+h3 { font-size: 1.375em;  line-height: 1.13636364;}
+h4 { font-size: 1.125em;  line-height: 1.11111111;}
+
+@media (min-width: 43.75em) {
+  main {
+    font-size: 1em;
+    line-height: 1.375;
+  }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125;
+  }
+  h2 {
+    font-size: 2em;
+    line-height: 1.25;
+  }
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+  h4 {
+    line-height: 1.22222222;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    line-height: 1.05;
+  }
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  line-height: 1.4em;
+}

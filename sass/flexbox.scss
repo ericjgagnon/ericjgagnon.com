@@ -1,0 +1,81 @@
+//Flexbox row and columns
+
+.flex {
+  @include display(flex);
+}
+
+.flex-row {
+  @extend .flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include breakpoint($sm) {
+    @include flex-wrap(nowrap);
+  }
+}
+
+.flex-row-wrap {
+  @extend .flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+}
+
+.flex-column {
+  @extend .flex;
+  @include flex-direction(column);
+}
+
+.space-between {
+  @include justify-content(space-between);
+}
+
+.space-around {
+  @include justify-content(space-around);
+}
+
+.justify-start {
+  @include justify-content(flex-start);
+}
+
+.justify-center {
+  @include justify-content(center);
+}
+
+.center {
+  @include align-items(center);
+}
+
+.wrap {
+  @include flex-wrap(wrap);
+}
+
+.no-wrap {
+  @include flex-wrap(nowrap);
+}
+
+.align-top {
+  @include align-items(flex-start);
+}
+
+.align-bottom {
+  @include align-items(flex-end);
+}
+
+.self-center {
+  @include align-self(center);
+}
+
+.self-start {
+  @include align-self(flex-start);
+}
+
+.grow {
+  @include flex-grow(1);
+}
+
+.dont-shrink {
+  @include flex-shrink(0);
+}
+
+.flex-1-0-auto {
+  @include flex(1 0 auto);
+}
